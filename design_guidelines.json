@@ -1,0 +1,77 @@
+{
+  "theme": "dark",
+  "archetype": "5 (Luxury)",
+  "color_palette": {
+    "background_base": "#0A0A0E",
+    "surface_level_1": "#12121A",
+    "surface_glass": "rgba(255, 255, 255, 0.03)",
+    "primary_accent": "#C4B5FD",
+    "secondary_accent": "#93C5FD",
+    "text_primary": "#F8FAFC",
+    "text_secondary": "#94A3B8",
+    "text_disabled": "#475569",
+    "border_subtle": "rgba(255, 255, 255, 0.06)",
+    "hover_state": "rgba(255, 255, 255, 0.08)"
+  },
+  "typography": {
+    "headings": "Outfit",
+    "body": "Manrope",
+    "weights": {
+      "headings": "font-light to font-medium",
+      "body": "font-normal"
+    },
+    "tracking": "tracking-tight for headings"
+  },
+  "design_patterns": {
+    "spacing": "Generous. Use p-6, p-8 for cards. Gap-6 or gap-8 for grids.",
+    "borders": "Subtle 1px borders (border-white/5) to separate dark elements without relying solely on shadows.",
+    "radius": "rounded-2xl for main cards, rounded-full for buttons and avatars",
+    "shadows": "Ambient glows instead of drop shadows. shadow-[0_0_40px_-10px_rgba(196,181,253,0.15)] for active/playing elements."
+  },
+  "components": {
+    "audio_player": "Persistent bottom bar, Glassmorphism (backdrop-blur-2xl bg-[#0A0A0E]/80 border-t border-white/5). Include track info, play controls, volume, queue button, and 'Start Party' icon.",
+    "party_room": "Immersive layout. Hero area shows synced rotating album art. Right sidebar or floating panel for live chat and shared queue. Accent glows pulse with music.",
+    "cards": "Music albums and playlists use Cardless approach or extremely subtle Glass panels with hover uplift (-translate-y-1) and image zoom.",
+    "buttons": "Primary buttons: bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/10. Avoid flat solid bright colors to keep it calm and premium."
+  },
+  "media": {
+    "album_covers": [
+      {
+        "url": "https://images.pexels.com/photos/13069544/pexels-photo-13069544.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Vivid red and blue swirls, modern abstract art",
+        "category": "album_art"
+      },
+      {
+        "url": "https://images.pexels.com/photos/15578335/pexels-photo-15578335.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Warm abstract moody swirling patterns",
+        "category": "album_art"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1641515860544-483ea99e265d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGFsYnVtJTIwYXJ0fGVufDB8fHx8MTc4MzQwODA0OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Blue and purple computer generated flower",
+        "category": "album_art"
+      }
+    ],
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1506863530036-1efeddceb993?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fHx8MTc4MzQwODA0OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Grayscale portrait",
+        "category": "user_avatar"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1515138692129-197a2c608cfd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwyfHxwb3J0cmFpdCUyMHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fHx8MTc4MzQwODA0OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Woman silhouette on black",
+        "category": "user_avatar"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install lucide-react for icons.",
+    "Install framer-motion for smooth transitions and the player seek bar.",
+    "Implement the 'Party Room' as a distinct view with a large central album cover, synced progress bar, and a sidebar for the chat & member list.",
+    "Ensure the persistent audio player stays fixed at the bottom across all views (Home, Profile, Library) except maybe Auth.",
+    "For the UI, avoid standard shadcn Cards; use div containers with `rounded-2xl bg-white/5 border border-white/5 backdrop-blur-lg` to create the 'glass' luxury feel.",
+    "Add 'data-testid' to ALL interactive elements (buttons, inputs, player controls).",
+    "Use deep void dark background (#0A0A0E) with very desaturated pastel accent colors (#C4B5FD) to ensure the 'premium, calm' theme user requested."
+  ]
+}
