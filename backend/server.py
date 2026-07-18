@@ -53,7 +53,7 @@ def verify_password(plain: str, hashed: str) -> bool:
     return bcrypt.checkpw(plain.encode("utf-8"), hashed.encode("utf-8"))
 
 def create_access_token(user_id: str) -> str:
-    payload = {"sub": user_id, "exp": datetime.now(timezone.utc) + timedelta(days=7), "type": "access"}
+    payload = {"sub": user_id, "exp": datetime.now(timezone.utc) + timedelta(days=30), "type": "access"}
     return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
 def user_public(u: dict) -> dict:
